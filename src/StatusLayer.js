@@ -14,12 +14,21 @@ var StatusLayer = cc.Layer.extend({
 
         var winsize = cc.director.getWinSize();
 
+        //Create the labels, set their anchor points and place them in the top corners.
         this.pointsLabel = new cc.LabelTTF("Points:0", "Helvetica", 20);
-        this.pointsLabel.setPosition(cc.p(winsize.width - 70, winsize.height - 20));
+        this.pointsLabel.attr({
+            anchorX:1,
+            anchorY:0
+        });
+        this.pointsLabel.setPosition(cc.p(winsize.width, winsize.height - this.pointsLabel.getContentSize().height));
         this.addChild(this.pointsLabel);
 
-        this.livesLeftLabel = new cc.LabelTTF("Lives left:0", "Helvetica", 20);
-        this.livesLeftLabel.setPosition(cc.p(0, winsize.height));
+        this.livesLeftLabel = new cc.LabelTTF("Lives left:"+defaultLives, "Helvetica", 20);
+        this.livesLeftLabel.attr({
+            anchorX:0,
+            anchorY:0
+        });
+        this.livesLeftLabel.setPosition(cc.p(0, winsize.height-this.livesLeftLabel.getContentSize().height));
         this.addChild(this.livesLeftLabel);
     },
 

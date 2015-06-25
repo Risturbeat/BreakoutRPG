@@ -33,12 +33,11 @@ var AnimationLayer = cc.Layer.extend({
         this._super();
 
         // create sprite sheet
-        //cc.spriteFrameCache.addSpriteFrames(res);
+        cc.spriteFrameCache.addSpriteFrames(res.bricks_plist);
         this.spriteSheet = new cc.SpriteBatchNode(res.bricks_png);
         this.addChild(this.spriteSheet);
 
         this.winsize = cc.director.getWinSize();
-        this.activeBlock = new Brick(1, this.space, this.spriteSheet, cc.p(128,this.winsize.height));
         /*
         //create runner through physic engine
         this.sprite = new cc.PhysicsSprite("#runner0.png");
@@ -85,16 +84,12 @@ var AnimationLayer = cc.Layer.extend({
 
     },
 
-    mouseHasBeenClicked:function(touch, event){
-        var pos = touch.getLocationY();
-        cc.log("position clicked at " + touch.getLocation());
-    },
     getEyeX:function () {
         return 0
     },
     onTouchBegan:function(touch, event) {
         var pos = touch.getLocation();
-        cc.log("position is " + pos);
+        cc.log("position clicked at " + touch.getLocation().x +","+touch.getLocation().y);
         return true;
     }
     /*

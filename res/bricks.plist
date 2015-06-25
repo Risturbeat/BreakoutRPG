@@ -4,18 +4,18 @@
     <dict>
         <key>frames</key>
         <dict>
-            <key>brick.png</key>
+            <key>normal_brick.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{2,2},{120,30}}</string>
+                <string>{{2,2},{90,30}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
                 <false/>
                 <key>sourceColorRect</key>
-                <string>{{0,0},{120,30}}</string>
+                <string>{{0,0},{90,30}}</string>
                 <key>sourceSize</key>
-                <string>{120,30}</string>
+                <string>{90,30}</string>
             </dict>
         </dict>
         <key>metadata</key>
@@ -25,9 +25,9 @@
             <key>realTextureFileName</key>
             <string>bricks.png</string>
             <key>size</key>
-            <string>{124,34}</string>
+            <string>{94,34}</string>
             <key>smartupdate</key>
-            <string>$TexturePacker:SmartUpdate:c19c04d8ffce6c00712d45bb5ff39a9e:0350be8aedfb91d99f68497302d4eaf7:65a9236138386320cc1ac7c1b5fef6a1$</string>
+            <string>$TexturePacker:SmartUpdate:3ab606aa526289bc63c6b7c25fff5170:af5ad542140a322bf130aec364316f1e:65a9236138386320cc1ac7c1b5fef6a1$</string>
             <key>textureFileName</key>
             <string>bricks.png</string>
         </dict>

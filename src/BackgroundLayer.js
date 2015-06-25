@@ -25,18 +25,33 @@ var BackgroundLayer = cc.Layer.extend({
         var spriteBG = new cc.Sprite(res.background_black_png);
         spriteBG.setPosition(centerPos);
         this.addChild(spriteBG);
-        cc.log("Background added");
-        //this.map00 = new cc.TMXTiledMap(res.background_black_png);
-        //this.addChild(this.map00);
-        //
-        //this.mapWidth = this.map00.getContentSize().width;
+
+        this.map00 = new cc.TMXTiledMap(res.level_one);
+        this.addChild(this.map00);
+
+        this.mapWidth = this.map00.getContentSize().width;
         //
         //// create sprite sheet
-        //cc.spriteFrameCache.addSpriteFrames(res.game_board_plist);
-        //this.spriteSheet = new cc.SpriteBatchNode(res.game_board_png);
-        //this.addChild(this.spriteSheet);
-        //
-        //this.scheduleUpdate();
+        cc.spriteFrameCache.addSpriteFrames(res.bricks_plist);
+        this.spriteSheet = new cc.SpriteBatchNode(res.bricks_png);
+        this.addChild(this.spriteSheet);
+
+        this.loadObjects(this.map00, 0);
+        this.scheduleUpdate();
+
+    },
+
+    loadObjects:function (map, mapIndex) {
+        // add coins
+        var brickGroup = map.getObjectGroup("bricks");
+        var brickArray = brickGroup.getObjects();
+        for (var i = 0; i < brickArray.length; i++) {
+            var brick = new Brick(this.spriteSheet,
+                this.space,
+                cc.p(brickArray[i]["x"] + this.mapWidth * mapIndex, brickArray[i]["y"]));
+            brick.mapIndex = mapIndex;
+            this.objects.push(brick);
+        }
     },
 
     removeObjects:function (mapIndex) {

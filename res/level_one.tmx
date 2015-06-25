@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.0" orientation="orthogonal" renderorder="right-down" width="50" height="28" tilewidth="16" tileheight="16" nextobjectid="59">
+ <tileset firstgid="1" name="bricks" tilewidth="120" tileheight="30">
+  <tile id="0">
+   <image width="120" height="30" source="TexturePacker/Bricks/normal_brick.png"/>
+  </tile>
+ </tileset>
+ <objectgroup name="bricks">
+  <object id="1" x="16" y="32" width="90" height="30"/>
+  <object id="36" x="128" y="32" width="90" height="30"/>
+  <object id="37" x="352" y="32" width="90" height="30"/>
+  <object id="38" x="240" y="32" width="90" height="30"/>
+  <object id="39" x="576" y="32" width="90" height="30"/>
+  <object id="40" x="464" y="32" width="90" height="30"/>
+  <object id="41" x="688" y="32" width="90" height="30"/>
+  <object id="45" x="128" y="80" width="90" height="30"/>
+  <object id="46" x="576" y="80" width="90" height="30"/>
+  <object id="47" x="240" y="80" width="90" height="30"/>
+  <object id="48" x="16" y="80" width="90" height="30"/>
+  <object id="49" x="464" y="80" width="90" height="30"/>
+  <object id="50" x="352" y="80" width="90" height="30"/>
+  <object id="51" x="688" y="80" width="90" height="30"/>
+  <object id="52" x="128" y="128" width="90" height="30"/>
+  <object id="53" x="576" y="128" width="90" height="30"/>
+  <object id="54" x="240" y="128" width="90" height="30"/>
+  <object id="55" x="16" y="128" width="90" height="30"/>
+  <object id="56" x="464" y="128" width="90" height="30"/>
+  <object id="57" x="352" y="128" width="90" height="30"/>
+  <object id="58" x="688" y="128" width="90" height="30"/>
+ </objectgroup>
+</map>

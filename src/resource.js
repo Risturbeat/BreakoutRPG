@@ -7,7 +7,8 @@ var res = {
     balls_plist: "res/balls.plist",
     //Backgrounds
     background_black_png: "res/background_black.png",
-
+    //Levels
+    level_one : "res/level_one.tmx",
 
     helloBG_png: "res/helloBG.png",
     start_n_png: "res/start_n.png",
@@ -21,7 +22,8 @@ var g_resources = [
     //Balls images
     res.balls_png,
     res.balls_plist,
-
+    //Levels
+    res.level_one,
 
     res.helloBG_png,
     res.start_n_png,

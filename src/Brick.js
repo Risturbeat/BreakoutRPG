@@ -1,19 +1,21 @@
 /**
- * Created by Gebruiker on 25-6-2015.
+ * Created by Daniel on 25-6-2015.
  */
 var Brick = cc.Class.extend({
     space: null,
-    spriteSheet:null,
     shape:null,
     sprite:null,
-    ctor: function(blockNumber, space, spriteSheet, pos){
+    ctor: function(spriteSheet, space, pos){
         this.space = space;
-
         //this.createSpriteWithBlockNumber(blockNumber);
         this.sprite = new cc.PhysicsSprite("#normal_brick.png");
+        this.sprite.attr({
+            anchorX:0,
+            anchorY:0
+        });
         this.initBrick(pos);
 
-        spriteSheet.addChild(this.sprite);
+        spriteSheet.addChild(this.sprite,1);
     },
     initBrick:function(pos){
         // init physics
@@ -21,7 +23,7 @@ var Brick = cc.Class.extend({
         body.setPos(pos);
 
         this.sprite.setBody(body);
-
+        cc.log("Sprite width " + this.sprite.getContentSize().width + "  Height: " + this.sprite.getContentSize().height);
         this.shape = new cp.BoxShape(body,
             this.sprite.getContentSize().width,
             this.sprite.getContentSize().height);
