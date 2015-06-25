@@ -1,21 +1,22 @@
 /**
  * Created by Daniel on 25-6-2015.
  */
-var Brick = cc.Class.extend({
+var Paddle = cc.Class.extend({
     space: null,
-    shape:null,
-    sprite:null,
-    ctor: function(spriteSheet, space, pos){
+    shape: null,
+    sprite: null,
+    ctor: function (spriteSheet, space, winSize) {
         this.space = space;
         //this.createSpriteWithBlockNumber(blockNumber);
-        this.sprite = new cc.PhysicsSprite("#normal_brick.png");
+        this.sprite = new cc.PhysicsSprite("#paddle_red.png");
         this.sprite.attr({
-            anchorX:0,
-            anchorY:0
+            anchorX: 0,
+            anchorY: 0
         });
+        var pos = cc.p(winSize.width/2, 0);
         this.initBrick(pos);
 
-        spriteSheet.addChild(this.sprite,1);
+        spriteSheet.addChild(this.sprite, 1);
     },
     initBrick:function(pos){
         // init physics
@@ -42,5 +43,4 @@ var Brick = cc.Class.extend({
     getShape:function () {
         return this.shape;
     }
-
 });

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+    <dict>
+        <key>frames</key>
+        <dict>
+            <key>paddle_red.png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{2,2},{180,30}}</string>
+                <key>offset</key>
+                <string>{0,0}</string>
+                <key>rotated</key>
+                <false/>
+                <key>sourceColorRect</key>
+                <string>{{0,0},{180,30}}</string>
+                <key>sourceSize</key>
+                <string>{180,30}</string>
+            </dict>
+        </dict>
+        <key>metadata</key>
+        <dict>
+            <key>format</key>
+            <integer>2</integer>
+            <key>realTextureFileName</key>
+            <string>paddles.png</string>
+            <key>size</key>
+            <string>{184,34}</string>
+            <key>smartupdate</key>
+            <string>$TexturePacker:SmartUpdate:1cea5b24347dfc58741f082aa4636f26:74a672d1b7f3e4b5149838b6db0e2cd9:65074672ce9f492f435658cc01552661$</string>
+            <key>textureFileName</key>
+            <string>paddles.png</string>
+        </dict>
+    </dict>
+</plist>

@@ -15,7 +15,7 @@ var AnimationLayer = cc.Layer.extend({
     body:null,
     shape:null,
     winsize: null,
-
+    paddle: null,
     recognizer:null,
     stat:RunnerStat.running,// init with running status
 
@@ -33,11 +33,13 @@ var AnimationLayer = cc.Layer.extend({
         this._super();
 
         // create sprite sheet
-        cc.spriteFrameCache.addSpriteFrames(res.bricks_plist);
-        this.spriteSheet = new cc.SpriteBatchNode(res.bricks_png);
+        cc.spriteFrameCache.addSpriteFrames(res.paddles_plist);
+        this.spriteSheet = new cc.SpriteBatchNode(res.paddles_png);
         this.addChild(this.spriteSheet);
 
         this.winsize = cc.director.getWinSize();
+
+        this.paddle = new Paddle(this.spriteSheet,this.space, this.winsize);
         /*
         //create runner through physic engine
         this.sprite = new cc.PhysicsSprite("#runner0.png");

@@ -5,6 +5,9 @@ var res = {
     //Balls
     balls_png: "res/balls.png",
     balls_plist: "res/balls.plist",
+    //Paddles
+    paddles_png: "res/paddles.png",
+    paddles_plist: "res/paddles.plist",
     //Backgrounds
     background_black_png: "res/background_black.png",
     //Levels
@@ -22,6 +25,9 @@ var g_resources = [
     //Balls images
     res.balls_png,
     res.balls_plist,
+    //Paddles
+    res.paddles_png,
+    res.paddles_plist,
     //Levels
     res.level_one,
 

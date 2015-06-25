@@ -21,6 +21,7 @@
       "src/GameOverLayer.js",
       "src/SimpleRecognizer.js",
 
-      "src/Brick.js"
+      "src/Brick.js",
+      "src/Paddle.js"
     ]
 }
