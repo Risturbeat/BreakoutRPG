@@ -15,7 +15,7 @@ var AnimationLayer = cc.Layer.extend({
     body:null,
     shape:null,
     winsize: null,
-    paddle: null,
+    paddle: 0,
     recognizer:null,
     stat:RunnerStat.running,// init with running status
 
@@ -91,8 +91,27 @@ var AnimationLayer = cc.Layer.extend({
     },
     onTouchBegan:function(touch, event) {
         var pos = touch.getLocation();
-        cc.log("position clicked at " + touch.getLocation().x +","+touch.getLocation().y);
-        return true;
+        var target = event.getCurrentTarget();
+
+        var locationInNode = target.convertToNodeSpace(touch.getLocation());
+        var targetPaddle = target.paddle;
+        var s = targetPaddle.getSpriteContentSize();
+
+        var rect = cc.rect(targetPaddle.getPaddleX(), targetPaddle.getPaddleY(), s.width, s.height);
+
+        //Check the click area
+        if (cc.rectContainsPoint(rect, locationInNode)) {
+            return true;
+        }
+        return false;
+    },
+    onTouchMoved: function (touch, event) {
+        var target = event.getCurrentTarget();
+        var delta = touch.getDelta();
+        target.x += delta.x;
+    },
+    onTouchEnded: function (touch, event) {
+
     }
     /*
     initAction:function () {

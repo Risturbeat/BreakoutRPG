@@ -42,5 +42,16 @@ var Paddle = cc.Class.extend({
 
     getShape:function () {
         return this.shape;
+    },
+
+    getSpriteContentSize:function(){
+        return this.sprite.getContentSize();
+    },
+
+    getPaddleX:function(){
+        return this.sprite.getPositionX();
+    },
+    getPaddleY:function(){
+        return this.sprite.getPositionY();
     }
 });
